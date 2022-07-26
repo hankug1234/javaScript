@@ -1,0 +1,25 @@
+/*
+object 에 대해 정리 한다
+javaScript 에서 object는 3가지 속성을 갖는다
+1. class 속성
+2. extensible 속성 = 행당 객체에 property를 추가 할수 있는지에 대한 값
+3. property 속성 = 해당 객체를 상속 하는 객체에 대한 정보
+
+객체의 property는 4가지 속성을 property 값을로 하는 property descriptor 객체를 갖는다
+1. value = 해당 property 가 갖는 값
+2. writable = 해당 property를 고쳐 쓸수 있는가?
+3. enumerable = 해당 property가 열거 가능 한가?
+4. configurable = 4가를 속성을 수정 할수 있는가? configurable 속성이 false 이면 이 4가지 속성은 변경 불가 하다
+
+getter/ setter 접근 property
+property 에 대한 접근자 역할을 한다
+get set으로 시작하며 정의되 있다면 각각 writable 과 value 속성을 대신 한다
+
+prototype 및 property 관련 함수
+getOwnPropertyNames(object)
+getOwnPropertyDescriptor(object,property_name)
+defineProperty(object,property_name,property_descriptor)
+hasOwnProperty(object)
+.isPrototypeOf(object)
+
+*/

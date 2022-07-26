@@ -52,3 +52,27 @@ function keys(o){
   }
   return result;
 }
+//모든 객체의 최상의 prototype인 Object에 extend 메서드를 추가 한다
+Object.defineProperty(Object.prototype,
+"extend",{
+  writable : true,
+  enumerable : false,
+  configurable : true,
+  value : function(o) {
+    var names = Object.getOwnPropertyNames(o);
+    for(var i =0; i< names.length;i++)
+    {
+      if(names[i] in this) continue;
+      var desc = Object.getOwnPropertyDescriptor(o,names[i]);
+      Object.defineProperty(this,names[i],desc);
+    }
+  }
+})
+
+var test = [];
+var target = {x:1,y:2,z:3};
+test.extend(target);
+for(x in test)
+{
+  console.log(x+":"+test[x]+" : "+Object.getOwnPropertyDescriptor(target,x)+"\n");
+}

@@ -1,3 +1,5 @@
+
+
 // in 상속 받은 property 까지 검사
 // hasOwnProperty() 고유 객체 property 만 검사
 // propertyIsEnumerable() 객체의 고유 property가 열거 가능할 경우 에만 true 반환
