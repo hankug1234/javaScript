@@ -17,8 +17,9 @@ Complex.ZERO = new Complex(0,0);
 Complex.ONE = new Complex(1,0);
 Complex.I = new Complex(0,1);
 
-
+/*
 var test = new Complex(1,1);
 console.log(test.toString());
 Complex.prototype.hello = function(){return "hello";};
 console.log(test.hello());
+*/
