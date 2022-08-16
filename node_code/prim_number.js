@@ -1,3 +1,4 @@
+module.exports = generatePrimes2;
 const min = 2;
 const max = 10000000;
 const primes = [];
@@ -36,8 +37,9 @@ function generatePrimes2(start,range){
     }
     prime = true;
   }
-
+console.log(primes2)
 }
+/*
 console.time('prime');
 generatePrimes(min,max);
 console.timeEnd('prime');
@@ -47,6 +49,7 @@ console.time('prime2');
 generatePrimes2(min,max);
 console.timeEnd('prime2');
 console.log(primes2.length);
+*/
 /*
 for(let k = 0; k<primes2.length;k++){
   for(var z =0; z<primes.length;z++){
