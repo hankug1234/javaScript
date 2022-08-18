@@ -1,6 +1,6 @@
 async function getUser(){
   try{
-    const res = await axios.get('/users');
+    const res = await axios.get('http://localhost:8082/users');
     const users = res.data;
     const list = document.getElementById('list');
     list.innerHTML = '';
@@ -16,7 +16,7 @@ async function getUser(){
           return alert("you must input your name");
         }
         try{
-          await axios.put('/user/'+key,{name});
+          await axios.put('http://localhost:8082/user/'+key,{name});
           getUser();
         }
         catch(err){
@@ -25,9 +25,9 @@ async function getUser(){
       });
       const remove = document.createElement('button');
       remove.textContent = 'remove';
-      remvoe.addEventListener('click',async()=>{
+      remove.addEventListener('click',async()=>{
         try{
-          await axios.delete('/user/'+key);
+          await axios.delete('http://localhost:8082/user/'+key);
           getUser();
         } catch(err){
           console.error(err);
@@ -52,7 +52,7 @@ document.getElementById('form').addEventListener('submit',async(e) => {
     return alert('input your name');
   }
   try{
-    await axios.post('/user',{name});
+    await axios.post('http://localhost:8082/user',{name});
     getUser();
   }catch(err){
     console.error(err);
