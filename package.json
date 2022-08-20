@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "0.0.1",
+  "description": "my node.js study project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hankug1234/javaScript.git"
+  },
+  "author": "hankug",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hankug1234/javaScript/issues"
+  },
+  "homepage": "https://github.com/hankug1234/javaScript#readme"
+}
