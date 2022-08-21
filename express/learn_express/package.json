@@ -1,0 +1,11 @@
+{
+  "name": "learn_express",
+  "version": "0.0.1",
+  "description": "express study toy code",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "author": "hankug",
+  "license": "ISC"
+}
