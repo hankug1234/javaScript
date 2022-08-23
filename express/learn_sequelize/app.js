@@ -3,7 +3,7 @@ const path = require('path');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 
-const {sequelize} = require("D://javaScript/express/models");
+const {sequelize,User,Comment} = require("D://javaScript/express/models");
 
 const app = express();
 app.set('port',process.env.PORT| 3001);
@@ -11,7 +11,13 @@ app.set('view engine','html');
 nunjucks.configure('views',{express:app, watch:true,});
 
 sequelize.sync({force:false})
-.then(()=>{console.log('database connection success');})
+.then(async()=>{
+  console.log('database connection success');
+  const user = await User.findOne({});
+  const comment = await Comment.create({comment:'hi'});
+  await user.addComment(comment);
+
+})
 .catch((err)=>{console.error(err);})
 
 app.use(morgan('dev'));
