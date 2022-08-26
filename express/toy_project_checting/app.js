@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 const session = require('express-session');
 
 dotenv.config();
-const pageRouter = require("./routes/?");
+const pageRouter = require("./routes/page.js");
 
 app = express();
 app.set('port',process.env.PORT | 3003);
