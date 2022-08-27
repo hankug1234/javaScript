@@ -8,6 +8,11 @@ const session = require('express-session');
 
 dotenv.config();
 const pageRouter = require("./routes/page.js");
+const database = require("./models/");
+
+database.sequelize.sync({force:fasle})
+.then(()=>{console.log("databases connection success");})
+.catch((err)=>{console.error(err);})
 
 app = express();
 app.set('port',process.env.PORT | 3003);
