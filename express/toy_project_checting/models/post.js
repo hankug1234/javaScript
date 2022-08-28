@@ -23,5 +23,8 @@ const Sequelize = require('sequelize');
    );
    }
 
-   static associate(db){}
+   static associate(db){
+     db.Post.belongsto(db.User);
+     db.Post.belongsToMany(db.Hashtag,{through:"PostHashtag"})
+   }
  };
